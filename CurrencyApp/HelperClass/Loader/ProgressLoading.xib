@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgressLoadingView" customModule="TestApp" customModuleProvider="target">
+            <connections>
+                <outlet property="animateView" destination="9Do-64-da9" id="HAb-wk-vn6"/>
+                <outlet property="containerView" destination="dkG-bU-FHH" id="WyL-Zt-UZg"/>
+                <outlet property="messageLabel" destination="y7d-4O-cHi" id="jZO-uQ-TpS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dkG-bU-FHH">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="198"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y7d-4O-cHi">
+                    <rect key="frame" x="39.5" y="170.5" width="71.5" height="20"/>
+                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Do-64-da9" customClass="AnimatedLoadingView" customModule="TestApp" customModuleProvider="target">
+                    <rect key="frame" x="37.5" y="83.5" width="75" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="9Do-64-da9" secondAttribute="height" multiplier="1:1" id="pWe-Ju-bqA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="8LZ-oj-YMZ"/>
+            <constraints>
+                <constraint firstItem="9Do-64-da9" firstAttribute="width" secondItem="dkG-bU-FHH" secondAttribute="width" multiplier="0.5" id="2Qn-i6-QuL"/>
+                <constraint firstItem="9Do-64-da9" firstAttribute="centerY" secondItem="8LZ-oj-YMZ" secondAttribute="centerY" id="W8U-nx-LGT"/>
+                <constraint firstItem="y7d-4O-cHi" firstAttribute="top" secondItem="9Do-64-da9" secondAttribute="bottom" constant="12" id="ZPc-nV-20c"/>
+                <constraint firstItem="y7d-4O-cHi" firstAttribute="centerX" secondItem="8LZ-oj-YMZ" secondAttribute="centerX" id="kxE-Ym-5Yw"/>
+                <constraint firstItem="9Do-64-da9" firstAttribute="centerX" secondItem="8LZ-oj-YMZ" secondAttribute="centerX" id="lYt-sX-uto"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-84.057971014492765" y="-276.5625"/>
+        </view>
+    </objects>
+</document>
